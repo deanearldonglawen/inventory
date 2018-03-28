@@ -261,10 +261,10 @@
 
             <form class="form" method="POST" action="{{ route('login') }}">
                 @csrf
-                <input id="email" type="text" placeholder="E-mail" name="email" value="{{ old('email') }}" required >
-                    @if ($errors->has('email'))
+                <input id="username" type="text" placeholder="Username" name="username" value="{{ old('username') }}" required >
+                    @if ($errors->has('username'))
                         <span class="invalid-feedback">
-                         <strong>{{ $errors->first('email') }}</strong>
+                         <strong>{{ $errors->first('username') }}</strong>
                         </span>
                     @endif
                 <input  id="password" type="password" placeholder="Password" name="password" required>
