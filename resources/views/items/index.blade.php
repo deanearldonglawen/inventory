@@ -121,9 +121,9 @@
                                     <tr class="red_blink">
                                         <td>{{ $item->item_name }}</td>
                                         <td>{{ $item->unit_of_measure }}</td>
-                                        <td>{{ $item->opening }}</td>
+                                        <td>{{  $item->opening . ' ' . $item->unit_of_measure }}</td>
                                         <td>{{ $item->order_period }}</td>
-                                        <td>{{ $item->sale }}</td>
+                                        <td>Php {{ $item->sale }}</td>
                                         <td>{{ $item->remarks }}</td>
                                         <td>
                                             <a href="{{ url('/items/' . $item->id) }}" title="View Item"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
@@ -140,9 +140,9 @@
                                         <tr>
                                             <td>{{ $item->item_name }}</td>
                                             <td>{{ $item->unit_of_measure }}</td>
-                                            <td>{{ $item->opening }}</td>
+                                            <td>{{ $item->opening . ' ' . $item->unit_of_measure }}</td>
                                             <td>{{ $item->order_period }}</td>
-                                            <td>{{ $item->sale }}</td>
+                                            <td>Php {{ $item->sale }}</td>
                                             <td>{{ $item->remarks }}</td>
                                             <td>
                                                 <a href="{{ url('/items/' . $item->id) }}" title="View Item"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

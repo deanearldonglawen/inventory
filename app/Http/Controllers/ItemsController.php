@@ -44,7 +44,8 @@ class ItemsController extends Controller
      */
     public function create()
     {
-        return view('items.create');
+        $editing = false;
+        return view('items.create',compact('editing'));
     }
 
     /**
@@ -88,8 +89,9 @@ class ItemsController extends Controller
     public function edit($id)
     {
         $item = Item::findOrFail($id);
-
-        return view('items.edit', compact('item'));
+        $editing = true;
+        return view('items.edit', compact('item'))
+            ->with('editing',$editing);
     }
 
     /**
